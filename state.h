@@ -9,9 +9,17 @@
  */
 
 typedef struct {
-  int value;
-  int actionIndex;
-  int depth;
+  int value; //value of node
+  int depth; //depth of node
+    /* history of actions applied to get from start to current node, stored as
+     * index 0 == start
+     * index 1 == +1
+     * index 2 == *2
+     * index 3 == *3
+     * index 4 == -1
+     * index 5 == /2
+     * index 6 == /3
+     * */
   int history[1000];
 } State;
 
