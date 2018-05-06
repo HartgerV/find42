@@ -66,11 +66,11 @@ int main(int argc, char *argv[]) {
 
     int start = 0;
     int goal = 42;
-    if (argc == 3) {
+    if (argc == 2) {
+        goal = atoi(argv[1]);
+    } else if (argc == 3) {
+        start = atoi(argv[1]);
         goal = atoi(argv[2]);
-    } else if (argc == 4) {
-        start = atoi(argv[2]);
-        goal = atoi(argv[3]);
     }
 
     printf("Found: %d \n",ids(start, goal));
